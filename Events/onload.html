@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnLoad Event Example</title>
+</head>
+<body onload="pageLoaded()">
+    <h1>Welcome to My Page</h1>
+    <p id="status">Loading...</p>
+
+    <script>
+        function pageLoaded() {
+            document.getElementById('status').textContent = 'Page has fully loaded!';
+        }
+    </script>
+</body>
+</html>

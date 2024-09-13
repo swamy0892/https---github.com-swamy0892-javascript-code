@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid gold;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: greenyellow;
+            border: none;
+            border-radius: 3px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: blue;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Salary Calculator</h1>
+        <form id="salaryForm">
+            <label for="deductions">Deductions ($):</label>
+            <input type="number" id="deductions" step="0.01" required>
+            <button type="button" onclick="calculateSalary()">Calculate Salary</button>
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function calculateSalary() {
+            // Fixed monthly salary
+            const fixedSalary = 25000;
+
+            // Get the deductions value from the input
+            const deductions = parseFloat(document.getElementById('deductions').value);
+
+            // Check if the deductions are valid
+            if (isNaN(deductions) || deductions < 0) {
+                document.getElementById('result').innerText = 'Please enter a valid deduction amount.';
+                return;
+            }
+
+            // Calculate the salary after deductions
+            const netSalary = fixedSalary - deductions;
+
+            // Display the result
+            document.getElementById('result').innerText = 
+                `The salary after deducting $${deductions.toFixed(2)} is: $${netSalary.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

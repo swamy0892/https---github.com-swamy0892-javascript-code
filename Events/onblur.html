@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnBlur Event Example</title>
+    <style>
+        .blurred {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blur on the Input Field</h1>
+    <input type="text" id="myInput" placeholder="Click or Tab to focus">
+
+    <script>
+        document.getElementById('myInput').onblur = function() {
+            this.classList.add('blurred');
+        };
+
+        document.getElementById('myInput').onfocus = function() {
+            this.classList.remove('blurred');
+        };
+    </script>
+</body>
+</html>

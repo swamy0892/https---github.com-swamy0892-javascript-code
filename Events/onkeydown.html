@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnKeyDown Event Example</title>
+</head>
+<body>
+    <h1>Press Any Key</h1>
+    <input type="text" id="myInput" placeholder="Type something...">
+    <p id="keyInfo"></p>
+
+    <script>
+        document.getElementById('myInput').onkeydown = function(event) {
+            var key = event.key;  // Get the key that was pressed
+            var keyCode = event.keyCode; // Get the key code
+            document.getElementById('keyInfo').textContent =
+             'Key pressed: ' + key + ' (Code: ' + keyCode + ')';
+        };
+    </script>
+</body>
+</html>

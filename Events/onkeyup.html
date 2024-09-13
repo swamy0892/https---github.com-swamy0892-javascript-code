@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnKeyUp Event Example</title>
+</head>
+<body>
+    <h1>Type Something</h1>
+    <input type="text" id="myInput" placeholder="Start typing...">
+    <p id="displayText">Text will appear here as you type.</p>
+
+    <script>
+        document.getElementById('myInput').onkeyup = function() {
+            var inputText = this.value;
+            document.getElementById('displayText').textContent = inputText;
+        };
+    </script>
+</body>
+</html>
