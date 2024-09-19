@@ -5,7 +5,7 @@ body {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid white;
     border-radius: 5px;
 }
 .form-group {
@@ -23,12 +23,12 @@ body {
 .form-group button {
     padding: 10px 15px;
     border: none;
-    background-color: #007BFF;
+    background-color: lawngreen;
     color: white;
     cursor: pointer;
 }
 .form-group button:hover {
-    background-color: #0056b3;
+    background-color: gold;
 }
 .result {
     margin-top: 20px;

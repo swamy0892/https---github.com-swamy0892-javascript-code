@@ -1,0 +1,22 @@
+div{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#grandparent{
+background-color: red;
+width: 300px;
+height: 300px;
+}
+#parent{
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+}
+#child{
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+}
