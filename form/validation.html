@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>form validation</title>
-    <link rel="stylesheet" href="validation.css">
-</head>
-<body>
-    <h1>Registraion form</h1>
-    <form name="regform" onsubmit="return validateForm()">
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>form validation</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+        <link rel="stylesheet" href="validation.css">
+        <script src='main.js'></script>
+    </head>
+    <body>
+        <h1>Registraion form</h1>
+        <form name="regform" onsubmit="return validateForm()">
         <p>
             <label for="name">Name:</label>
             <input type="text" id="name" name="Name" placeholder="Enter your full name" required/>
@@ -61,7 +64,7 @@
             <input type="submit" value="send" name="submit"/>
             <input type="reset" value="reset" name="reset"/>
         </p>
-    </form>
-    <script src="validation.js"></script>
-</body>
+        </form>
+        <script src="validation.js"></script>
+    </body>
 </html>
