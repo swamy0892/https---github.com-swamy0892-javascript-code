@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Manager</title>
+    <link rel="stylesheet" href="loanmanager.css">
+</head>
+<body>
+    <h1>Loan Manager</h1>
+    <div class="loan-form">
+        <h2>Apply for a Loan</h2>
+        <input type="text" id="applicantName" placeholder="Applicant Name" required/>
+        <input type="number" id="monthlyIncome" placeholder="Monthly Income" required/>
+        <input type="number" id="accountBalance" placeholder="Account Balance" required/>
+        <input type="number" id="amountRequested" placeholder="Amount Requested" required/>
+        <button onclick="loanManager.applyLoan()">Submit Application</button>
+    </div>
+    <div class="loan-list">
+        <h2>Loan Applications</h2>
+        <ul id="loanList"></ul>
+    </div>
+    
+
+    <script src="loanmanager.js"></script>
+</body>
+</html>
