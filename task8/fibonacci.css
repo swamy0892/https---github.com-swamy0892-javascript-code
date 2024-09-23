@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1, h2 {
+    color: rebeccapurple;
+}
+
+input {
+    margin-right: 10px;
+}
+
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
