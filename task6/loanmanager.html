@@ -4,24 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loan Manager</title>
+    <script src="loanmanager.js" defer></script>
     <link rel="stylesheet" href="loanmanager.css">
 </head>
 <body>
-    <h1>Loan Manager</h1>
-    <div class="loan-form">
-        <h2>Apply for a Loan</h2>
-        <input type="text" id="applicantName" placeholder="Applicant Name" required/>
-        <input type="number" id="monthlyIncome" placeholder="Monthly Income" required/>
-        <input type="number" id="accountBalance" placeholder="Account Balance" required/>
-        <input type="number" id="amountRequested" placeholder="Amount Requested" required/>
-        <button onclick="loanManager.applyLoan()">Submit Application</button>
-    </div>
-    <div class="loan-list">
-        <h2>Loan Applications</h2>
-        <ul id="loanList"></ul>
-    </div>
-    
+    <h1>Loan Application</h1>
+    <form id="loanForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br><br>
 
-    <script src="loanmanager.js"></script>
+        <label for="income">Monthly Income:</label>
+        <input type="number" id="income" required><br><br>
+
+        <label for="balance">Account Balance:</label>
+        <input type="number" id="balance" required><br><br>
+
+        <label for="amount">Loan Amount:</label>
+        <input type="number" id="amount" required><br><br>
+
+        <button type="submit">Apply for Loan</button>
+    </form>
+
+    <h2>Loan Applications</h2>
+    <ul id="applicationsList"></ul>
+
+    <script>
+        document.getElementById('loanForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const income = parseFloat(document.getElementById('income').value);
+            const balance = parseFloat(document.getElementById('balance').value);
+            const amount = parseFloat(document.getElementById('amount').value);
+
+            const loanApplication = { name, income, balance, amount };
+            LoanManager.applyForLoan(loanApplication);
+            displayApplications();
+            this.reset();
+        });
+
+        function displayApplications() {
+            const list = document.getElementById('applicationsList');
+            list.innerHTML = '';
+            LoanManager.getAllLoans().forEach(loan => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${loan.name} - ${loan.status}`;
+                list.appendChild(listItem);
+            });
+        }
+    </script>
 </body>
 </html>

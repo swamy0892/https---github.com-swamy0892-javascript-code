@@ -65,9 +65,9 @@ class LoanManager {
 
 // Example Usage
 const loanManager = new LoanManager();
-loanManager.applyLoan('Alice', 32000, 15000, 50000);
-loanManager.applyLoan('Bob', 25000, 5000, 30000);
-loanManager.applyLoan('Charlie', 35000, 20000, 100000);
+loanManager.applyLoan('swamy', 32000, 15000, 50000);
+loanManager.applyLoan('ravi', 25000, 5000, 30000);
+loanManager.applyLoan('ram', 35000, 20000, 100000);
 
 loanManager.listLoans();
 
